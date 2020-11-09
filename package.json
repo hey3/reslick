@@ -22,8 +22,7 @@
   "module": "dist/esm/index.js",
   "typings": "dist/umd/index.d.ts",
   "files": [
-    "esm",
-    "umd"
+    "dist"
   ],
   "sideEffects": false,
   "scripts": {
