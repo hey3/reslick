@@ -1,0 +1,216 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel renders correctly 1`] = `
+.c0 ul {
+  margin: 0;
+  padding-inline-start: 0;
+}
+
+.c0 .horizontal-media-scroller {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc(100% / 1 - calc(2.5rem / 2));
+  gap: calc(2.5rem / 2);
+  width: auto;
+  min-width: 100%;
+  padding-inline: 2.5rem;
+  padding-block: calc(2.5rem / 2);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-scroll-snap-type: x proximity;
+  -moz-scroll-snap-type: x proximity;
+  -ms-scroll-snap-type: x proximity;
+  scroll-snap-type: x proximity;
+  outline-offset: -5px;
+  -webkit-animation: unset;
+  animation: unset;
+}
+
+.c0 .horizontal-media-scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.c0 .horizontal-media-scroller:focus {
+  outline: none;
+}
+
+.c0 .horizontal-media-scroller:hover {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.c0 .horizontal-media-scroller > li > a {
+  width: auto;
+  height: auto;
+  inline-size: auto;
+  -webkit-block-size: auto;
+  -ms-flex-block-size: auto;
+  block-size: auto;
+}
+
+<section
+  className="c0 carousel-root"
+>
+  <ul
+    className="horizontal-media-scroller"
+    tabIndex={0}
+  >
+    <div>
+      test
+    </div>
+  </ul>
+</section>
+`;
+
+exports[`Carousel renders correctly 2`] = `
+.c0 ul {
+  margin: 0;
+  padding-inline-start: 0;
+}
+
+.c0 .horizontal-media-scroller {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc(100% / 1 - calc(2.5rem / 2));
+  gap: calc(2.5rem / 2);
+  width: auto;
+  min-width: 100%;
+  padding-inline: 2.5rem;
+  padding-block: calc(2.5rem / 2);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-scroll-snap-type: x proximity;
+  -moz-scroll-snap-type: x proximity;
+  -ms-scroll-snap-type: x proximity;
+  scroll-snap-type: x proximity;
+  outline-offset: -5px;
+  -webkit-animation: unset;
+  animation: unset;
+}
+
+.c0 .horizontal-media-scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.c0 .horizontal-media-scroller:focus {
+  outline: none;
+}
+
+.c0 .horizontal-media-scroller:hover {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.c0 .horizontal-media-scroller > li > a {
+  width: auto;
+  height: auto;
+  inline-size: auto;
+  -webkit-block-size: auto;
+  -ms-flex-block-size: auto;
+  block-size: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: calc(2.5rem / 2);
+  -webkit-scroll-snap-align: start;
+  -moz-scroll-snap-align: start;
+  -ms-scroll-snap-align: start;
+  scroll-snap-align: start;
+}
+
+.c1 a {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.c1 a > figure {
+  position: relative;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: inherit;
+  height: inherit;
+  inline-size: inherit;
+  -webkit-block-size: inherit;
+  -ms-flex-block-size: inherit;
+  block-size: inherit;
+  margin: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c1 a > figure > picture {
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  inline-size: inherit;
+  -webkit-block-size: inherit;
+  -ms-flex-block-size: inherit;
+  block-size: inherit;
+  border-radius: 1ex;
+  box-shadow: 0 1px 2px 0 hsl(0 0% 0% / 20%);
+  overflow: hidden;
+}
+
+.c1 a > figure > picture > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  inline-size: 100%;
+  -webkit-block-size: 100%;
+  -ms-flex-block-size: 100%;
+  block-size: 100%;
+  background-image: linear-gradient(to bottom,hsl(210 10% 40%),hsl(210 10% 20%));
+  background-color: #525252;
+  object-fit: cover;
+}
+
+<section
+  className="c0 carousel-root"
+>
+  <ul
+    className="horizontal-media-scroller"
+    tabIndex={0}
+  >
+    <li
+      className="c1 carousel-item-root"
+    >
+      <a
+        className="carousel-link-area"
+      >
+        <figure
+          className="carousel-image-are"
+        >
+          <picture
+            className="carousel-picture"
+          >
+            <img
+              className="carousel-image"
+              loading="lazy"
+            />
+          </picture>
+        </figure>
+      </a>
+      <div
+        className="carousel-content"
+      />
+    </li>
+  </ul>
+</section>
+`;
