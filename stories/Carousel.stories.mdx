@@ -1,0 +1,225 @@
+import { Description, Meta, Props, Source, Subtitle, Story, Title } from '@storybook/addon-docs/blocks'
+import { action } from '@storybook/addon-actions'
+import { boolean, number, text } from '@storybook/addon-knobs'
+import { Button } from '@storybook/react/demo'
+
+import { Carousel, CarouselItem } from '../src'
+
+<Meta
+  title="Carousel"
+  component={Carousel}
+  id="reslick"
+  decorators={[
+    storyFn => (
+      <div style={{ overflowX: 'hidden', backgroundColor: '#f5f5f5' }}>
+        <div style={{ margin: '1rem' }}>{storyFn()}</div>
+      </div>
+    ),
+  ]}
+/>
+
+<Title>React Carousel</Title>
+
+<Subtitle>This is the simple carousel using React + Typescript + styled-component.</Subtitle>
+
+<Source code="import { Carousel, CarouselItem } from 'reslick'" language="typescript" dark />
+
+## Description
+
+This is a component can display a simple carousel.
+
+Learn more about the Props and the CSS customization points.
+
+In essence, use the CarouselItem component as the children of the Carousel component.
+
+In addition to CarouselItem, various items can be displayed as a carousel.
+
+Carousel is clickable and it is possible to perform various actions as well.
+
+They can be shown as the content under the figure by adding a node to the children of the CarouselItem.
+
+## Selected canvas
+
+<Story id="." />
+
+<Source id="." dark />
+
+## Getting into details
+
+<Story name="Default">
+  <div aria-label="default carousel">
+    <h2 style={{ fontWeight: 400, letterSpacing: '0.75px' }}>Default Carousel</h2>
+  </div>
+  <Carousel
+    displayCount={number('displaySize', 4)}
+    imageWidth={text('imageWidth', 'auto')}
+    imageHeight={text('imageHeight', 'auto')}
+  >
+    {[...Array(number('slides', 10))].map((_, index) => {
+      return (
+        <CarouselItem
+          key={index}
+          alt={`https://picsum.photos/500/500?${index}`}
+          src={`https://picsum.photos/500/500?${index}`}
+          onClick={action(`slide${index + 1} image clicked!`)}
+        />
+      )
+    })}
+  </Carousel>
+</Story>
+
+<Story name="AutoSlide">
+  <div aria-label="auto slide carousel">
+    <h2 style={{ fontWeight: 400, letterSpacing: '0.75px' }}>Auto Slide Carousel</h2>
+  </div>
+  <Carousel
+    autoSlide
+    displayCount={number('displaySize', 4)}
+    imageWidth={text('imageWidth', 'auto')}
+    imageHeight={text('imageHeight', 'auto')}
+  >
+    {[...Array(number('slides', 10))].map((_, index) => {
+      return (
+        <CarouselItem
+          key={index}
+          alt={`https://picsum.photos/500/500?${index}`}
+          src={`https://picsum.photos/500/500?${index}`}
+          onClick={action(`slide${index + 1} image clicked!`)}
+        />
+      )
+    })}
+  </Carousel>
+</Story>
+
+<Story name="WithContent">
+  <div aria-label="with contents carousel">
+    <h2 style={{ fontWeight: 400, letterSpacing: '0.75px' }}>With Content Carousel</h2>
+  </div>
+  <Carousel
+    displayCount={number('displaySize', 4)}
+    imageWidth={text('imageWidth', 'auto')}
+    imageHeight={text('imageHeight', 'auto')}
+    autoSlide={boolean('autoSlide', false)}
+  >
+    {[...Array(number('slides', 10))].map((_, index) => {
+      const num = index + 1
+      return (
+        <CarouselItem
+          key={index}
+          alt={`https://picsum.photos/500/500?${index}`}
+          src={`https://picsum.photos/500/500?${index}`}
+          onClick={action(`slide${num} image clicked!`)}
+        >
+          <article style={{ display: 'flex', flexDirection: 'column' }}>
+            <h1
+              style={{
+                margin: 0,
+                padding: '0 0 10px',
+                color: '#454545',
+                fontSize: '26px',
+                fontWeight: 700,
+              }}
+            >{`Content${num}`}</h1>
+            <section>
+              <h1
+                style={{
+                  margin: 0,
+                  padding: '0 0 20px',
+                  color: '#E74C3B',
+                  fontSize: '20px',
+                }}
+              >
+                description
+              </h1>
+              <p
+                style={{
+                  marginTop: 0,
+                  display: 'block',
+                  color: '#666666',
+                  fontSize: '14px',
+                  lineHeight: '1.8em',
+                }}
+              >{`This slide number is ${num}`}</p>
+            </section>
+            <Button onClick={action(`slide${num} button clicked!`)}> sample</Button>
+          </article>
+        </CarouselItem>
+      )
+    })}
+  </Carousel>
+</Story>
+
+## Props
+
+### Carousel Component
+
+<Props of={Carousel} />
+
+### CarouselItem Component (has image element attributes)
+
+<Props of={CarouselItem} />
+
+## CSS
+
+### Carousel Component
+
+<table>
+  <thead>
+    <tr>
+      <th>Rule name</th>
+      <th>Global class</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>root</td>
+      <td>.carousel-root</td>
+      <td>Styles applied to the root element.</td>
+    </tr>
+    <tr>
+      <td>styleScroller</td>
+      <td>.horizontal-media-scroller</td>
+      <td>Styles applied to the scroller element.</td>
+    </tr>
+  </tbody>
+</table>
+
+### CarouselItem Component
+
+<table>
+  <thead>
+  <tr>
+    <th>Rule name</th>
+    <th>Global class</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>root</td>
+    <td>.carousel-item-root</td>
+    <td>Styles applied to the root element.</td>
+  </tr>
+  <tr>
+    <td>styleLinkArea</td>
+    <td>.carousel-link-area</td>
+    <td>Styles applied to the clickable area element.</td>
+  </tr>
+  <tr>
+    <td>styleImageArea</td>
+    <td>.carousel-image-are</td>
+    <td>Styles applied to the image area element.</td>
+  </tr>
+  <tr>
+    <td>stylePicture</td>
+    <td>.carousel-picture</td>
+    <td>Styles applied to the picture element.</td>
+  </tr>
+  <tr>
+    <td>styleImage</td>
+    <td>.carousel-image</td>
+    <td>Styles applied to the img element.</td>
+  </tr>
+  </tbody>
+</table>
