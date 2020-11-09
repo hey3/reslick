@@ -16,6 +16,8 @@ This is the simple carousel using React + Typescript + styled-component.
 
 ## Installation
 
+[![reslick](https://nodei.co/npm/reslick.png)](https://npmjs.org/package/reslick)
+
 ```bash
 # Install package
 $ yarn add reslick
