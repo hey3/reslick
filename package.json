@@ -1,6 +1,6 @@
 {
   "name": "reslick",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is the simple carousel using React + Typescript + styled-component.",
   "homepage": "https://github.com/hey3/reslick#readme",
   "repository": {
